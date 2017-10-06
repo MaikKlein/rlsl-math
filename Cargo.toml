@@ -2,7 +2,3 @@
 name = "rlsl-math"
 version = "0.1.0"
 authors = ["Maik Klein <maikklein@googlemail.com>"]
-
-[dependencies.num]
-version = "0.1.40"
-features = []

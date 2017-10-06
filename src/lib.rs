@@ -1,7 +1,15 @@
 #![feature(custom_attribute, attr_literals)]
-extern crate num;
+use std::ops::{Add, Mul};
+pub trait Float: Copy + Add<Output = Self> + Mul<Output = Self> {
+    fn sqrt(self) -> Self;
+}
 
-use num::Float;
+impl Float for f32 {
+    fn sqrt(self) -> f32 {
+        self.sqrt()
+    }
+}
+
 #[spirv(Vec2)]
 #[repr(C)]
 #[derive(Debug, Clone, Copy, PartialEq)]
